@@ -1,0 +1,50 @@
+# Enterprise IT Infrastructure & Help Desk Portfolio
+
+## Overview
+This repository contains a comprehensive, 14-part enterprise infrastructure portfolio deployed on a Microsoft Azure Virtual Machine. It was engineered to simulate a live corporate network environment and demonstrate hands-on proficiency in Tier 1 Help Desk operations, Windows Server administration, and network diagnostics.
+
+Rather than relying on theoretical knowledge, this project provides documented, visual proof of active system configuration, command-line execution, and automated troubleshooting workflows. 
+
+## Infrastructure Architecture
+* **Cloud Environment:** Microsoft Azure (Virtual Machine)
+* **Operating System:** Windows Server 2022 Datacenter
+* **Core Technologies:** PowerShell, Command Prompt (`sc.exe`, `net`, `ipconfig`), Active Directory concepts, Remote Desktop Protocol (RDP)
+* **Support Utilities:** AnyDesk (Unattended Access), Wireshark, Windows Event Viewer
+
+## Project Directory (The 14 Labs)
+Each directory below contains a dedicated README detailing the objective, execution logic, and visual assets proving successful implementation.
+
+* **[Lab 00: Azure Virtual Machine Provisioning & Remote Access](./Lab_00_Azure_VM_Setup)**
+  * *Deploying cloud infrastructure and configuring RDP for administrative control.*
+* **[Lab 01: User Account & Lifecycle Management](./Lab_01_User_Account_Management)**
+  * *Executing onboarding, offboarding, and password resets via GUI and CLI.*
+* **[Lab 02: Network Connectivity & DNS Troubleshooting](./Lab_02_Network_Connectivity)**
+  * *Isolating localized and upstream network drops using `ping`, `tracert`, and `ipconfig`.*
+* **[Lab 03: Windows Event Viewer & Log Analysis](./Lab_03_Event_Viewer)**
+  * *Auditing critical system events and identifying dirty shutdowns or failed login spikes.*
+* **[Lab 04: Task Manager & Resource Monitoring](./Lab_04_Task_Manager)**
+  * *Diagnosing CPU/RAM bottlenecks and terminating locked applications.*
+* **[Lab 05: Disk Management & Storage Troubleshooting](./Lab_05_Disk_Management)**
+  * *Auditing physical drive health and executing partition modifications.*
+* **[Lab 06: Printer Spooler & Queue Troubleshooting](./Lab_06_Printer_Troubleshooting)**
+  * *Force-purging corrupted print jobs and performing automated service resets.*
+* **[Lab 07: SLA-Compliant Ticketing Simulation](./Lab_07_Ticketing_Simulation)**
+  * *Structuring high-quality, actionable documentation for IT escalations.*
+* **[Lab 08: Backup & Disaster Recovery](./Lab_08_Backup_Restore)**
+  * *Navigating system restore points and evaluating data retention strategies.*
+* **[Lab 09: Windows Service Management & Dependencies](./Lab_09_Windows_Services)**
+  * *Mapping parent-child process dependencies and scripting PowerShell health audits.*
+* **[Lab 10: Remote Support Deployments & Unattended Access](./Lab_10_AnyDesk)**
+  * *Engineering silent network payloads to deploy third-party screen-sharing agents.*
+* **[Lab 11: System Information & Hardware Diagnostics](./Lab_11_System_Information)**
+  * *Extracting baseline hardware telemetry and identifying blocked communication ports.*
+* **[Lab 12: File Permissions & Access Control Lists](./Lab_12_File_Permissions)**
+  * *Enforcing departmental security through strict Allow/Deny network share protocols.*
+* **[Lab 13: Browser Troubleshooting & DNS Resolution](./Lab_13_Browser_Troubleshooting)**
+  * *Isolating cache corruption and flushing DNS resolvers to restore application connectivity.*
+
+## About the Engineer
+Currently pursuing an A.S. in Artificial Intelligence at Hillsborough College and CompTIA Network+ certified, this portfolio bridges the gap between high-pressure operational leadership and scalable cloud infrastructure. It demonstrates a relentless focus on rapid incident triage, secure systems administration, and minimizing end-user downtime.
+
+## Navigation Instructions
+To review the execution of a specific lab, click on the corresponding folder link above. Inside, you will find the operational documentation and an `assets/` folder containing the command-line outputs and system configurations for that module.
