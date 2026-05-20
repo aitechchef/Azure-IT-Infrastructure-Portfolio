@@ -1,0 +1,25 @@
+# Lab 08: Data Archival & Backup Strategies
+
+## Objective
+Identify local backup constraints within a server environment and engineer an automated PowerShell archival tool to secure critical user data prior to system modifications.
+
+## Scenario
+Help Desk technicians must secure user data before executing destructive troubleshooting steps. While consumer operating systems rely on localized tools like System Restore or File History, enterprise server environments disable these features to enforce strict, off-server backup compliance. This lab documents identifying those OS-level constraints and scripting a custom file-level backup solution.
+
+## Execution & Logic
+**Phase 1: OS Constraint Identification**
+1. Executed `sysdm.cpl` to access System Properties.
+2. Verified the absence of the **System Protection** (System Restore) tab. 
+
+*Infrastructure Insight:* Documented that Windows Server operating systems intentionally omit consumer restore points. As noted in standard Help Desk protocols, System Restore is not a true backup solution because snapshots are stored locally on the C: drive and cannot survive a physical volume failure. 
+
+**Phase 2: PowerShell Automation (Custom Data Archival)**
+Because native localized backup tools were unavailable, a custom CLI solution was required to secure a user's local directory.
+* Engineered a PowerShell script (`Backup-UserData.ps1`) to automatically isolate and compress user files.
+* Utilized variable pathing (`$env:USERPROFILE`) to dynamically target the current user's Documents folder.
+* Generated an isolated IT backup directory (`C:\IT_Backups`) utilizing `New-Item`.
+* Utilized `Compress-Archive` to securely package the target directory into a single, timestamped `.zip` file, ensuring data integrity before any simulated system changes.
+
+## Assets & Documentation
+* `Lab08_01_SystemProperties_ServerConstraint.png` - GUI documentation proving the intentional omission of System Restore in Server environments.
+* `Lab08_02_PowerShell_DataBackup.png` - Automated execution of the custom user data compression and archival script.
